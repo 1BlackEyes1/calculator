@@ -8,15 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-<link rel="shortcut icon" href="favicon.ico"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<script src="main.js" defer></script>
 </head>
 <body>
   <h1 class="tittle">CALCULATOR</h1>
   <div class="calculator-container">
     <div class="screen-container"> 
       <div class="screen-style">
-      <p class="screen-p">1999</p>
-      <h2 class="screen">1999</h2>
+      <p class="screen-p"></p>
+      <h2 class="screen">0</h2>
       </div>
     </div>
       <div class="clear-container">
@@ -35,23 +36,25 @@
           <button class="button__number seven btn ">7</button>
           <button class="button__number eight btn">8</button>
           <button class="button__number nine btn">9</button>
-          <button class="button__spot btn">.</button>
-          <button class="button__more btn">+</button>
-          <button class="button__less btn">-</button>
-          <button class="button__multiply btn">*</button>
-          <button class="button__divide btn">/</button>
+          <button class="button__spot button__number btn">.</button>
+          <button class="button__more btn operator">+</button>
+          <button class="button__less btn operator">-</button>
+          <button class="button__multiply btn operator">*</button>
+          <button class="button__divide btn operator">/</button>
           <button class="button__equal btn">=</button>
       </div>
   </div>
   <footer> <p>
-        Copyright ©
+        Copyright © <span></span>
         <script>
-          document.write(new Date().getFullYear())
+          let year = document.querySelector('span')
+          year.textContent = new Date().getFullYear()
+          year.style.fontSize = "25px"
         </script>
-        1BlackEyes1
-      </p>
-      <a href="https://github.com/1BlackEyes1" target="_blank">
+        1BlackEyes1 <a href="https://github.com/1BlackEyes1" target="_blank">
         <i class="fa-brands fa-github"></i>
-      ></a></footer>
+      </a>
+      </p>
+      </footer>
 </body>
 </html>
